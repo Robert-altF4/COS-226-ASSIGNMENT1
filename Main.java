@@ -20,7 +20,7 @@ public class Main
                 Auction auction =new Auction(AuctionUtils.generateItemName());
                 //Lock lock = new Lock(); /*Add your lock here*/
 
-                Lock lock = new CLH();
+                Lock lock = new MCS();
 
                 System.out.println("Starting auction for: " + auction.getItemName());
                 Runner runner = new Runner(numberOfThreads,iterations,auction,lock);
